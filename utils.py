@@ -31,7 +31,7 @@ def load_data(nomeJson):
         return contentPython
 
 def load_template(nomeHtml):
-    filepath = "templates/"+nomeHtml
+    filepath = "docs/"+nomeHtml
     content = read_file(filepath)
     return content
 
