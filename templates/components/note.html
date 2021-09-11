@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="note" id="note-{id}">
+    <div class="card-content"> 
+      <h3 class="card-title">{title}</h3>
+      <div class="card-text">
+        <p>
+          {details}
+        </p>
+      </div>
+    </div>
+    <div class="modify-menu" id="modify-menu-{id}">
+      <button class="modify-button" id="edit-button-{id}" onclick=""><i class="material-icons">edit</i></button>
+      <form method="post">
+        <input type="hidden" name="method" value="DELETE">
+        <input type="hidden" name="id" value="{id}"/>
+        <button class="modify-button" id="delete-button-{id}" type="submit"><i class="material-icons">delete</i></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="note-modify" id="note-modify-{id}">
+    <form class="update-form" method="post">
+      <input type="hidden" name="method" value="UPDATE"/>
+      <input type="hidden" name="id" value="{id}"/>
+      <div class="card-content">
+        <input class="modify-card-title" type="title" name="title" value="{title}"/>
+        <div class="card-text">
+          <input class="modify-card-text" type="text" name="details" value="{details}"/>
+        </div>
+      </div>
+      <div class="modify-menu" id="modify-menu-{id}">
+        <button class="modify-button" id="edit-button-{id}" type="submit"><i class="material-icons">done</i></button>
+        <button class="modify-button" id="delete-button-{id}" onclick=""><i class="material-icons">keyboard_return</i></button>
+      </div>
+    </form>
+  </div>
+</div>
