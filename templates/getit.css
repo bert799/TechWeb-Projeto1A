@@ -92,7 +92,7 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.23);
   word-wrap: break-word;
   width: 15%;
-  height: 7rem;
+  height: 8rem;
   margin: 0.2rem;
   padding: 0.3rem;
   margin-bottom: 1rem;
@@ -102,20 +102,22 @@ body {
 .note{
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex;
   flex-direction: row;
 }
 
 .note-modify{
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   flex-direction: row;
 }
 
 .card-content{
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-title{
@@ -156,6 +158,30 @@ body {
   flex-direction: row;
 }
 
+.modify-card-title{
+  width: 100%;
+  background: none;
+  border-style: solid;
+  border-width: 0.12rem;
+  border-radius: 0.3rem;
+  border-color: #000000;
+  font-family: 'Permanent Marker', cursive;
+  margin-bottom: 0.5rem;
+}
+
+.modify-card-text{
+  width: 100%;
+  height: 60%;
+  resize: none;
+  background: none;
+  border-style: solid;
+  border-width: 0.12rem;
+  border-radius: 0.3rem;
+  border-color: #000000;
+  font-family: 'Permanent Marker', cursive;
+  font-size:smaller;
+  color: #4c4c4c;
+}
 .card-color-1{
   background-color: #ead3a7
 }
