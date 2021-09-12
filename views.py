@@ -6,13 +6,16 @@ from database import *
 db = Database('data/notes')
 
 def index(request):
+    print("\n\n\n\n##################################ENTREI AQUI###########################################")
     # A string de request sempre começa com o tipo da requisição (ex: GET, POST)
     if request.startswith('POST'):
+        print("\n\n\n###############################",request)
         request = request.replace('\r', '')  # Remove caracteres indesejados
         # Cabeçalho e corpo estão sempre separados por duas quebras de linha
         partes = request.split('\n\n')
         corpo = partes[1]
         params = {}
+        print("\n\n\n###############################AAAAAAA",corpo)
         # Preencha o dicionário params com as informações do corpo da requisição
         # O dicionário conterá dois valores, o título e a descrição.
         # Posteriormente pode ser interessante criar uma função que recebe a

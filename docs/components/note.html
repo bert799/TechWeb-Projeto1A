@@ -1,35 +1,31 @@
-<div class="card">
+<div class="card" id = "card-{id}">
   <div class="note" id="note-{id}">
     <div class="card-content"> 
-      <h3 class="card-title">{title}</h3>
-      <div class="card-text">
+      <h3 class="card-title" id="title-{id}">{title}</h3>
+      <div class="card-text" id="details-{id}">
         <p>
           {details}
         </p>
       </div>
     </div>
     <div class="modify-menu" id="modify-menu-{id}">
-      <button class="modify-button" id="edit-button-{id}" onclick="openUpdateForm({id})"><i class="material-icons">edit</i></button>
-      <form method="post">
-        <input type="hidden" name="method" value="DELETE">
-        <input type="hidden" name="id" value="{id}"/>
-        <button class="modify-button" id="delete-button-{id}" type="submit"><i class="material-icons">delete</i></button>
-      </form>
+      <button class="modify-button" id="edit-button-{id}" onclick="openUpdateCard({id})"><i class="material-icons">edit</i></button>
+      <input type="hidden" name="method" value="DELETE">
+      <input type="hidden" name="id" value="{id}"/>
+      <button class="modify-button" id="delete-button-{id}" type="button" onclick="DeleteCard({id})"><i class="material-icons">delete</i></button>
     </div>
   </div>
 
   <div class="note-modify" id="note-modify-{id}">
-    <form class="update-form" method="post">
-      <input type="hidden" name="method" value="UPDATE"/>
-      <input type="hidden" name="id" value="{id}"/>
-      <div class="card-content">
-        <input class="modify-card-title" type="title" name="title" value="{title}"/>
-        <textarea class="modify-card-text" name="details">{details}</textarea>
-      </div>
-      <div class="modify-menu" id="modify-menu-{id}">
-        <button class="modify-button" id="edit-button-{id}" type="submit"><i class="material-icons">done</i></button>
-        <button class="modify-button" id="delete-button-{id}" onclick="closeUpdateForm({id})"><i class="material-icons">keyboard_return</i></button>
-      </div>
-    </form>
+    <input type="hidden" name="method" value="UPDATE"/>
+    <input type="hidden" name="id" value="{id}"/>
+    <div class="card-content">
+      <input class="modify-card-title" id="modify-card-title-{id}" type="title" name="title" value="{title}"/>
+      <textarea class="modify-card-text" id="modify-card-text-{id}" name="details">{details}</textarea>
+    </div>
+    <div class="modify-menu" id="modify-menu-{id}">
+      <button class="modify-button" id="edit-button-{id}" type="button" onclick="UpdateDoc({id})"><i class="material-icons">done</i></button>
+      <button class="modify-button" id="delete-button-{id}" onclick="closeUpdateCard({id})"><i class="material-icons">keyboard_return</i></button>
+    </div>
   </div>
 </div>
